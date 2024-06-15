@@ -13,12 +13,12 @@ if 'DYNO' in environ:
 else:
     ON_HEROKU = False
 BIND_ADRESS = str(getenv('WEB_SERVER_BIND_ADDRESS', '0.0.0.0'))
-FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN','https://xoneapp-sid1st-0620d415.staging.koyeb.app/') else APP_NAME+'.herokuapp.com'
+FQDN = str(getenv('FQDN', BIND_ADRESS)) if not ON_HEROKU or getenv('FQDN','') else APP_NAME+'.herokuapp.com'
 URL = "https://{}/".format(FQDN) if ON_HEROKU or NO_PORT else \
     "http://{}:{}/".format(FQDN, PORT)
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 WORKERS = int(environ.get('WORKERS', '4'))
-SESSION_NAME = str(environ.get('SESSION_NAME', 'LazyBot'))
+SESSION_NAME = str(environ.get('SESSION_NAME', 'MissSusie'))
 MULTI_CLIENT = False
 name = str(environ.get('name', 'LazyPrincess'))
 PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
@@ -29,9 +29,9 @@ if HAS_SSL:
 else:
     URL = "http://{}/".format(FQDN)
 UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', None))
-#BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001987654567")).split())) 
-STREAM_LOGS = environ.get('STREAM_LOGS','1002185718827')
-SESSION = environ.get('SESSION','MissRozy')
+BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "-1001987654567")).split())) 
+STREAM_LOGS = environ.get('STREAM_LOGS','-1002185718827')
+SESSION = environ.get('SESSION','MissSusie')
 CUSTOM_CAPTION = environ.get('CUSTOM_CAPTION')
 
 
@@ -40,15 +40,15 @@ class Config(object):
 	API_HASH = os.environ.get("API_HASH", "0d79d297bb8f56caed2c8f08bfc17289")
 	BOT_TOKEN = os.environ.get("BOT_TOKEN","")
 	BOT_USERNAME = os.environ.get("BOT_USERNAME" , "MissSusie_bot")
-	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001300777736"))
+	DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001700999955"))
 	BOT_OWNER = int(os.environ.get("BOT_OWNER", "5052476013"))
 	DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://subhamgupta992sg:UXRT66yXTlP7MTJt@cluster0.bza4jw6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002151777689")
-	LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1001756200250")
+	UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1001693383743")
+	LOG_CHANNEL = os.environ.get("LOG_CHANNEL", "-1001700999955")
 	BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "1234567890").split())
 	FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", True))
 	BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
-	LAZY_CHANNEL = int(os.environ.get('LAZY_CHANNEL','-100'))
+	LAZY_CHANNEL = int(os.environ.get('LAZY_CHANNEL',''))
 	LAZY_MODE = bool(os.environ.get("LAZY_MODE", False))
 	LAZY_PIC = os.environ.get("LAZY_PIC","https://telegra.ph/file/d382d2fad1fdd2a4ccca4.png")
 	LP_BTN_MAIN_CH_USRNM = os.environ.get("LP_BTN_MAIN_CH_USRNM")
@@ -66,24 +66,18 @@ class Config(object):
 
 🤖 **ᴍʏ ɴᴀᴍᴇ:** [ꜰɪʟᴇꜱ ꜱᴛᴏʀᴇ ʙᴏᴛ](https://t.me/{"MissSusie_bot"})
 
-📝 **ʟᴀɴɢᴜᴀɢᴇ:** [PУΓHФИ3](https://www.python.org)
-
-📚 **ʟɪʙʀᴀʀʏ:** [P͢y͢r͢o͢g͢r͢a͢m͢](https://docs.pyrogram.org)
-
-📡 **ʜᴏꜱᴛᴇᴅ ᴏɴ:** [koyeb](https://app.koyeb.com)
-
 🧑🏻‍💻 **DΞVΞLФPΞЯ:** [Riffy](https://t.me/Subhamse1h)
 
-# 👥 **šupp⊕r† gr⊕up:** [LazY-SupP⊕ЯΓ](https://t.me/LazyDeveloperSupport)
+# 👥 **šupp⊕r† gr⊕up:** [LazY-SupP⊕ЯΓ](https://t.me/+fNGvkfXhsQVkZjI1)
 
 # 📢 **U͢p͢d͢a͢t͢e͢s͢ C͢h͢a͢n͢n͢e͢l͢:** [L͢a͢z͢y͢D͢e͢v͢e͢l͢o͢p͢e͢r͢](https://t.me/LazyDeveloper)
 """
 	ABOUT_DEV_TEXT = f"""
-#🧑🏻‍💻 <a href='https://t.me/LazyDeveloperr'>**ミ★- L͢a͢z͢y͢D͢e͢v͢e͢l͢o͢p͢e͢r͢ -★彡** </a>
+#🧑🏻‍💻 <a href='https://t.me/Subhamse1h'>**ミ★- L͢a͢z͢y͢D͢e͢v͢e͢l͢o͢p͢e͢r͢ -★彡** </a>
 
-#<a href=''https://t.me/LazyDeveloperr>ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ</a> ɪꜱ ꜱᴜᴘᴇʀ ɴᴏᴏʙ 😎. ᴊᴜꜱᴛ ʟᴇᴀʀɴɪɴɢ ꜰʀᴏᴍ ᴏꜰꜰɪᴄɪᴀʟ ᴅᴏᴄꜱ. ᴘʟᴇᴀꜱᴇ ᴅᴏɴᴀᴛᴇ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ ꜰᴏʀ ᴋᴇᴇᴘɪɴɢ ᴛʜᴇ ꜱᴇʀᴠɪᴄᴇ ᴀʟɪᴠᴇ.
+#<a href=''https://t.me/Subhamse1h>ʟᴀᴢʏᴅᴇᴠᴇʟᴏᴘᴇʀ</a> ɪꜱ ꜱᴜᴘᴇʀ ɴᴏᴏʙ 😎. ᴊᴜꜱᴛ ʟᴇᴀʀɴɪɴɢ ꜰʀᴏᴍ ᴏꜰꜰɪᴄɪᴀʟ ᴅᴏᴄꜱ. ᴘʟᴇᴀꜱᴇ ᴅᴏɴᴀᴛᴇ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴘᴇʀ ꜰᴏʀ ᴋᴇᴇᴘɪɴɢ ᴛʜᴇ ꜱᴇʀᴠɪᴄᴇ ᴀʟɪᴠᴇ.
 ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ᴅᴇᴠᴇʟᴏᴘᴇʀ ᴡɪʟʟ ᴅᴇʟᴇᴛᴇ ᴀᴅᴜʟᴛ ᴄᴏɴᴛᴇɴᴛꜱ ꜰʀᴏᴍ ᴅᴀᴛᴀʙᴀꜱᴇ. ꜱᴏ ʙᴇᴛᴛᴇʀ ᴅᴏɴ'ᴛ ꜱᴛᴏʀᴇ ᴛʜᴏꜱᴇ ᴋɪɴᴅ ᴏꜰ ᴛʜɪɴɢꜱ.
-#[Donate Now](https://p.paytm.me/xCTH/2jym9edy) (Paytm)
+#[Donate Now]() (Paytm)
 """
 	LAZY_HOME_TEXT = """
 HΞУ, [{}](tg://user?id={})\n\nɪ'ᴍ ᴀ ᴘᴇʀᴍᴀɴᴇɴᴛ **ꜰɪʟᴇ ꜱᴛᴏʀᴇ ʙᴏᴛ**.
